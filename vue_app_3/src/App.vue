@@ -1,16 +1,54 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div id="header">
+      <span id="title">Header Set in App.vue</span>
     </div>
-    <router-view/>
+
+    <div id="main">
+      <div id="nav">
+        <router-link to="/">Home</router-link>|
+        <router-link to="/about">About</router-link>|
+        <router-link to="/myPage">myPage</router-link>
+      </div>
+      <router-view/>
+    </div>
+
+    <div id="footer">
+      <span>Footer Set in App.vue</span>
+    </div>
   </div>
 </template>
 
 <style>
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 45px;
+  width: 100%;
+  background: red;
+  line-height: 45px;
+}
+#title {
+  font-size: 22px;
+  color: white;
+  font-family: impact;
+}
+#main {
+  padding-top: 45px;
+  padding-bottom: 50px;
+}
+#footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 45px;
+  width: 100%;
+  background: red;
+  line-height: 45px;
+}
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

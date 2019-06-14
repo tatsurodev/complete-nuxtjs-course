@@ -1,68 +1,33 @@
 <template>
-  <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        nuxt_practice
-      </h1>
-      <h2 class="subtitle">
-        My prime Nuxt.js project
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >GitHub</a>
-      </div>
-    </div>
-  </div>
+  <section class="container">
+    <h1>Introduction:</h1>
+    <gallery/>
+    <!-- Q. 写真の下のコンテンツ部分に余白をintroduction, tech, historyページの全てに設けるにはどうしたらよいか？ -->
+    <!-- A. index.vueはnuxtタグを通じて出力され、nuxtタグはdefault.vueでmain componentによってネストされている。よって、main componentに余白用のcssを追加する -->
+    <div
+      class="description"
+    >The Toyota Land Cruiser (Japanese: トヨタ ランドクルーザー Toyota Rando-kurūzā) is a series of four-wheel drive vehicles produced by the Japanese car maker Toyota. It is Toyota's longest running series. Production of the first generation Land Cruiser began in 1951 (90 units) as Toyota's version of a Jeep-like vehicle. The Land Cruiser has been produced in convertible, hardtop, station wagon and cab chassis versions. The Land Cruiser's reliability and longevity has led to huge popularity, especially in Australia where it is the best-selling body-on-frame, four-wheel drive vehicle. Toyota also extensively tests the Land Cruiser in the Australian outback – considered to be one of the toughest operating environments in both temperature and terrain. In Japan, the Land Cruiser is exclusive to Toyota Japanese dealerships called Toyota Store.</div>
+  </section>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import gallery from "~/components/gallery.vue";
 
 export default {
   components: {
-    Logo
+    gallery
   }
-}
+};
 </script>
 
 <style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+h1 {
+  font-family: inpact;
+  color: green;
 }
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+.description {
+  font-size: 16px;
+  line-height: 24px;
+  margin: 10px;
 }
 </style>

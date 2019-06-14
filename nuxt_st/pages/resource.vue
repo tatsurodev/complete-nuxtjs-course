@@ -14,6 +14,19 @@
 </template>
 <script>
 export default {
+  head() {
+    return {
+      title: "RESOURCE: pages/resource.vue",
+      meta: [
+        {
+          // hidでオーバーラードするnuxt.config.jsのmetaタグのhidを指定する。ないと2つmetaタグ(nuxt.config.jsで設定したものとここで指定したもの)が作られてしまうので注意
+          hid: "description",
+          name: "resource",
+          content: "RESOURCE PAGE"
+        }
+      ]
+    };
+  },
   data() {
     return {
       image: ["~/assets/asset.jpg", "/static.jpg"]

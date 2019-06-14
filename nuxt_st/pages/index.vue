@@ -19,6 +19,19 @@ import AppLogo from "~/components/AppLogo.vue";
 export default {
   // layoutの指定がない場合、default.vueが読み込まれる
   // layout: "my_layout",
+  head() {
+    return {
+      title: "HOME: pages/index.vue",
+      meta: [
+        {
+          // hidでオーバーラードするnuxt.config.jsのmetaタグのhidを指定する。ないと2つmetaタグ(nuxt.config.jsで設定したものとここで指定したもの)が作られてしまうので注意
+          hid: "description",
+          name: "description",
+          content: "HOME PAGE"
+        }
+      ]
+    };
+  },
   components: {
     AppLogo
   }

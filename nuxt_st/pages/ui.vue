@@ -28,6 +28,19 @@
 
 <script>
 export default {
+  head() {
+    return {
+      title: "UI: pages/ui.vue",
+      meta: [
+        {
+          // hidでオーバーラードするnuxt.config.jsのmetaタグのhidを指定する。ないと2つmetaタグ(nuxt.config.jsで設定したものとここで指定したもの)が作られてしまうので注意
+          hid: "description",
+          name: "ui",
+          content: "UI PAGE"
+        }
+      ]
+    };
+  },
   data() {
     return {
       dismissSecs: 10,

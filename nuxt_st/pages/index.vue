@@ -1,6 +1,7 @@
 <template>
   <section class="container">
     <div>
+      <i style="font-size: 66px" class="fab fa-500px"></i>
       <app-logo/>
       <h1 class="title">nuxt_st</h1>
       <h2 class="subtitle">Nuxt.js project</h2>
@@ -17,7 +18,7 @@ import AppLogo from "~/components/AppLogo.vue";
 
 export default {
   // layoutの指定がない場合、default.vueが読み込まれる
-  layout: "my_layout",
+  // layout: "my_layout",
   components: {
     AppLogo
   }

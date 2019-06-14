@@ -1,5 +1,9 @@
 <template>
-  <div id="vuex">{{ $store.state.msg }}</div>
+  <div id="vuex">
+    {{ $store.state.msg }}
+    <hr>
+    {{ $store.state.module_1.msg }}
+  </div>
 </template>
 <script>
 export default {};

@@ -1,3 +1,4 @@
+/* classic mode
 import vuex from 'vuex'
 // vue的手法で必要
 // import vue from 'vue'
@@ -20,3 +21,9 @@ const store = {
 export default function () {
   return new vuex.Store(store)
 }
+*/
+
+/* module mode */
+export const state = () => ({
+  msg: 'msg in store/index.js state MODULE'
+})

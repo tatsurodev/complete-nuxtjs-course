@@ -1,13 +1,34 @@
 <template>
   <div>
-    <nuxt />
+    <Header/>
+    <Main>
+      <Navi/>
+      <nuxt/>
+    </Main>
+    <Footer/>
   </div>
 </template>
+<script>
+// header, main, footerは、予約されているのでcapitalizeしてコンフリクトを避ける
+import Header from "@/components/header";
+import Main from "@/components/main";
+import Footer from "@/components/footer";
+import Navi from "@/components/navi";
+
+export default {
+  components: {
+    Header,
+    Main,
+    Footer,
+    Navi
+  }
+};
+</script>
 
 <style>
 html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;

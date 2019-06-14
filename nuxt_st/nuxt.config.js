@@ -54,8 +54,11 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-    }
+    },
+    // webpack4以降でvendorはdeprecated, vendorは何度も読み込まれることを防ぐが目的
+    // vendor: ['bootstrap-vue']
   },
   // cdnはここでは使えないのでheadセクションでインストールする
-  css: ['@/assets/page_structure.css']
+  css: ['@/assets/page_structure.css'],
+  plugins: ['@/plugins/bootstrap.js']
 }

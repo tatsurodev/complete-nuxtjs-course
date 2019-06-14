@@ -60,5 +60,10 @@ module.exports = {
   },
   // cdnはここでは使えないのでheadセクションでインストールする
   css: ['@/assets/page_structure.css'],
-  plugins: ['@/plugins/bootstrap.js']
+  // pluginはファイルパス
+  // plugins: ['@/plugins/bootstrap.js'],
+  // nuxt modulesは事前にインストールされたpluginで、パケージ名のみの指定で使える。plugins folder以下に設定ファイルを書く必要もないのでpluginより便利
+  modules: [
+    'bootstrap-vue/nuxt'
+  ]
 }

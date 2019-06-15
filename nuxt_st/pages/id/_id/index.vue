@@ -4,7 +4,7 @@
     <b-card border-variant="info" footer-bg-variant="info" text-variant="info">
       <p>
         <i class="fas fa-file-code"></i>
-        <span>pages/_id/index.vue</span>
+        <span>pages/id/_id/index.vue</span>
       </p>
       <b-alert show variant="info">
         <i class="fas fa-id-card-alt"></i>
@@ -12,7 +12,7 @@
         <b>{{ $route.params.id }}</b>
         <hr>
         <!-- 名前付きrouteは、folder-file_nameで、paramsでidの動的パラメータ部を渡す -->
-        <nuxt-link :to="{ name: 'id-detail', params: { id: $route.params.id } }">Detail Page</nuxt-link>
+        <nuxt-link :to="{ name: 'id-id-detail', params: { id: $route.params.id } }">Detail Page</nuxt-link>
       </b-alert>
       <div slot="footer">
         <span style="color:white">Dynamic Route</span>

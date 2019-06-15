@@ -15,6 +15,8 @@
         <span style="color:white">Dynamic Route</span>
       </div>
     </b-card>
+    <hr>
+    <nuxt-child></nuxt-child>
   </div>
 </template>
 <script>

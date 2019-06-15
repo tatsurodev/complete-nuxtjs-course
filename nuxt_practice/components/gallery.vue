@@ -2,7 +2,8 @@
   <div id="gallery">
     <img src="@/assets/suv.jpeg" alt="land cruiser">
     <b-alert show variant="info">
-      <b>Toyota</b> Land Cruiser
+      <b>{{ $store.state.brand }}</b>
+      {{ $store.state.model }}
     </b-alert>
   </div>
 </template>

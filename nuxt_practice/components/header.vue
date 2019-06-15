@@ -1,5 +1,7 @@
 <template>
-  <div id="header">Header by comp./Header.vue + layout/default.vue</div>
+  <div id="header">
+    <Avatar icon="ios-person" size="large"/>
+  </div>
 </template>
 
 <script>

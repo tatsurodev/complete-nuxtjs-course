@@ -11,6 +11,8 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "bootstrap-vue": "^2.0.0-rc.23",
+    "iview": "^3.4.2",
     "nuxt": "^2.8.1"
   },
   "devDependencies": {

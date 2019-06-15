@@ -1,9 +1,9 @@
 <template>
   <div id="gallery">
     <img src="@/assets/suv.jpeg" alt="land cruiser">
-    <h2>
+    <b-alert show variant="info">
       <b>Toyota</b> Land Cruiser
-    </h2>
+    </b-alert>
   </div>
 </template>
 

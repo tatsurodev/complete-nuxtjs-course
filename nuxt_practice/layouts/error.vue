@@ -7,7 +7,9 @@
       </li>
     </ul>
     <hr>
-    <a href="http://localhost:3000/">Return to Home</a>
+    <a href="http://localhost:3000/">
+      <i class="fas fa-home"></i>
+    </a>
   </div>
 </template>
 <script>

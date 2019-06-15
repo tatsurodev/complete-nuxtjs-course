@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-    <h1>Tech Spec:</h1>
+    <h1 class="heading">Tech Spec:</h1>
     <gallery/>
     <div class="tech">Tech Spec Content</div>
   </section>
@@ -17,13 +17,4 @@ export default {
 </script>
 
 <style>
-h1 {
-  font-family: inpact;
-  color: green;
-}
-.description {
-  font-size: 16px;
-  line-height: 24px;
-  margin: 10px;
-}
 </style>

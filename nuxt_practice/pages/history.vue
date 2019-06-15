@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-    <h1>History:</h1>
+    <h1 class="heading">History:</h1>
     <gallery/>
     <div
       class="history"
@@ -19,13 +19,4 @@ export default {
 </script>
 
 <style>
-h1 {
-  font-family: inpact;
-  color: green;
-}
-.description {
-  font-size: 16px;
-  line-height: 24px;
-  margin: 10px;
-}
 </style>

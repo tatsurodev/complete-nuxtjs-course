@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-    <h1>Introduction:</h1>
+    <h1 class="heading">Introduction:</h1>
     <gallery/>
     <!-- Q. 写真の下のコンテンツ部分に余白をintroduction, tech, historyページの全てに設けるにはどうしたらよいか？ -->
     <!-- A. index.vueはnuxtタグを通じて出力され、nuxtタグはdefault.vueでmain componentによってネストされている。よって、main componentに余白用のcssを追加する -->
@@ -33,13 +33,4 @@ export default {
 </script>
 
 <style>
-h1 {
-  font-family: inpact;
-  color: green;
-}
-.description {
-  font-size: 16px;
-  line-height: 24px;
-  margin: 10px;
-}
 </style>

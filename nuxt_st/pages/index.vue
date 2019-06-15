@@ -17,6 +17,15 @@
 import AppLogo from "~/components/AppLogo.vue";
 
 export default {
+  // 文字列で指定した場合、enter時のみtransitionが得られ、leave時はなし
+  // transition: 'prefix',
+  // objectで指定した場合、文字列で指定したときより詳細に指定できる
+  transition: {
+    duration: 1000,
+    // anime.cssで作成、インストール(/assets/anime.css)したanimationが適用する
+    enterActiveClass: "animated slideInUp",
+    leaveActiveClass: "animated slideOutDown"
+  },
   // layoutの指定がない場合、default.vueが読み込まれる
   // layout: "my_layout",
   head() {

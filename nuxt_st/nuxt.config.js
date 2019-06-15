@@ -65,5 +65,14 @@ module.exports = {
   // nuxt modulesは事前にインストールされたpluginで、パケージ名のみの指定で使える。plugins folder以下に設定ファイルを書く必要もないのでpluginより便利
   modules: [
     'bootstrap-vue/nuxt'
-  ]
+  ],
+  router: {
+    // Q.タブのactiveクラス付与のベストソリューションは？
+    // A. query dataも考慮すると$route.pathから選択タブを判定するのがベスト、ただ面倒
+    // linkExactActiveClassをただのactiveクラスに名称変更
+    // linkExactActiveClassの問題点は、query data使用時に使えないこと ex. /route?msg=helloの時 Route:my_routeタグがactiveにならない
+    // linkExactActiveClass: 'active',
+    // linkActiveClassの問題点は、Homeタブが常にアクティブになり、nested routeで親コンポーネントのタグ(/route)が子コンポーネント(/route/my_route)選択時にactiveになってしまうこと
+    // linkActiveClass: 'active',
+  }
 }

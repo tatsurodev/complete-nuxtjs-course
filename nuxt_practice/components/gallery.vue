@@ -2,7 +2,7 @@
   <div id="gallery">
     <img src="@/assets/suv.jpeg" alt="land cruiser">
     <b-alert show variant="info">
-      <b>{{ $store.state.brand }}</b>
+      <b>{{ $store.getters.capital_barand }}</b>
       {{ $store.state.model }}
     </b-alert>
   </div>

@@ -7,6 +7,8 @@
       </li>
     </ul>
     <hr>
+    <img src="/error.jpeg" alt="error">
+    <hr>
     <a href="http://localhost:3000/">
       <i class="fas fa-home"></i>
     </a>
@@ -28,12 +30,14 @@ export default {
 </script>
 <style scoped>
 #error_page {
-  border: 2px blue dashed;
-  border-radius: 5px;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
   font-size: 22px;
   line-height: 36px;
+}
+#error_page img {
+  margin: 10px;
+  width: 45%;
 }
 #error_page a {
   font-size: 24px;

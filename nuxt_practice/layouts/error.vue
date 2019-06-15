@@ -15,7 +15,15 @@
 <script>
 export default {
   props: ["error"],
-  layout: "error_layout"
+  layout: "error_layout",
+  head() {
+    return {
+      title: this.error.message,
+      meta: [
+        { hid: "description", name: "description", content: this.error.message }
+      ]
+    };
+  }
 };
 </script>
 <style scoped>

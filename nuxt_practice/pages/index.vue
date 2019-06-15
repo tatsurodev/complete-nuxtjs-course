@@ -16,6 +16,18 @@ import gallery from "~/components/gallery.vue";
 export default {
   components: {
     gallery
+  },
+  head() {
+    return {
+      title: "Introduction",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          countent: "Toyota Land Cruiser"
+        }
+      ]
+    };
   }
 };
 </script>

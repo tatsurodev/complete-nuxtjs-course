@@ -22,6 +22,9 @@
 </template>
 <script>
 export default {
+  transition: {
+    name: "prefix"
+  },
   head() {
     return {
       title: "pages/route.vue"

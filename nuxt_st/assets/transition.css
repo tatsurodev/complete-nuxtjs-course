@@ -1,0 +1,23 @@
+/* 全ページtransitionさせたい場合 */
+/* prefix pageは特別なprefixで全てのページがtransitionの影響を受けるということ */
+/* prefix pageだとnested routeで親子間でページ移動すると(ex. /route, /route/my_route)parent componentは表示され続けるのでtransitionしないという問題がある .page-enter-active, */
+/* .page-leave-active {
+  transition: opacity .5s;
+}
+
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+} */
+
+/* 特定のページのみtransitionさせたい場合 */
+/* 最初に任意のprefixを設定、この場合prefixにしている */
+.prefix-enter-active,
+.prefix-leave-active {
+  transition: opacity .5s;
+}
+
+.prefix-enter,
+.prefix-leave-to {
+  opacity: 0;
+}

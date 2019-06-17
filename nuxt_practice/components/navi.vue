@@ -1,17 +1,23 @@
 <template>
   <div id="navi_bar">
-    <a href="http://localhost:3000/">Introduction</a>
-    <a href="http://localhost:3000/spec">Tech Spec</a>
-    <a href="http://localhost:3000/history">History</a>
+    <nuxt-link to="/">Introduction</nuxt-link>
+    <nuxt-link to="/spec">Tech Spec</nuxt-link>
+    <nuxt-link to="/history">History</nuxt-link>
   </div>
 </template>
 
 <style scoped>
+/* このactiveクラスをuniversal cssに書くと優先順位から下記のaタグのスタイルが優先されてしまうので、ここに書く */
+.active {
+  background: green;
+  color: white;
+}
+
 #navi_bar {
   list-style: none;
   text-align: center;
 }
-#navi_bar a {
+a {
   text-decoration: none;
   display: inline-block;
   width: 150px;

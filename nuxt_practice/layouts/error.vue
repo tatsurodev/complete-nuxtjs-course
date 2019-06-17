@@ -9,9 +9,9 @@
     <hr>
     <img src="/error.jpeg" alt="error">
     <hr>
-    <a href="http://localhost:3000/">
+    <nuxt-link to="/">
       <i class="fas fa-home"></i>
-    </a>
+    </nuxt-link>
   </div>
 </template>
 <script>

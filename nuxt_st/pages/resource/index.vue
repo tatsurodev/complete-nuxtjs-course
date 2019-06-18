@@ -10,7 +10,8 @@
   </div>
 </template>
 <script>
-import axios from "axios";
+// @nuxtjs/axios moduleで使用する場合、context.$axiosで使用できるのでimport不要
+// import axios from "axios";
 export default {
   head() {
     return {
@@ -44,10 +45,12 @@ export default {
   // },
   async asyncData(context) {
     try {
-      const response = await axios.get("http://localhost:9000/retrieve");
+      const response = await context.$axios.get(
+        "http://localhost:9000/retrieve"
+      );
       return response.data;
     } catch (err) {
-      context.error({ message: "ajax problem..." });
+      context.error({ message: err.message });
     }
   },
   data() {

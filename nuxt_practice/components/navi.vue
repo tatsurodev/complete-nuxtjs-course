@@ -1,8 +1,8 @@
 <template>
   <div id="navi_bar">
-    <nuxt-link to="/">Introduction</nuxt-link>
-    <nuxt-link to="/spec">Tech Spec</nuxt-link>
-    <nuxt-link to="/history">History</nuxt-link>
+    <nuxt-link :to="'/'+$route.params.id">Introduction</nuxt-link>
+    <nuxt-link :to="'/'+$route.params.id+'/spec'">Tech Spec</nuxt-link>
+    <nuxt-link :to="'/'+$route.params.id+'/history'">History</nuxt-link>
   </div>
 </template>
 

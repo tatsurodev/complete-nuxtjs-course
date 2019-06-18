@@ -1,17 +1,17 @@
 <template>
-  <div class="history">{{ $store.state.history }}</div>
+  <div class="description">{{ $store.state.list[$route.params.id].introduction }}</div>
 </template>
 
 <script>
 export default {
   head() {
     return {
-      title: "History",
+      title: "Introduction",
       meta: [
         {
           hid: "description",
           name: "description",
-          content: "History of Land Cruiser"
+          content: "Introduction"
         }
       ]
     };

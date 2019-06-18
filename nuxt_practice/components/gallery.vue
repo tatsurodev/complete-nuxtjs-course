@@ -1,9 +1,9 @@
 <template>
   <div id="gallery">
-    <img src="@/assets/suv.jpeg" alt="land cruiser">
+    <img :src="$store.state.list[$route.params.id].image" alt="land cruiser">
     <b-alert show variant="info">
-      <b>{{ $store.getters.capital_barand }}</b>
-      {{ $store.state.model }}
+      <b>{{ $store.state.list[$route.params.id].brand }}</b>
+      {{ $store.state.list[$route.params.id].model }}
     </b-alert>
   </div>
 </template>

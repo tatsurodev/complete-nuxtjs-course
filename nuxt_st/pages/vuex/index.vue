@@ -14,7 +14,15 @@
   </div>
 </template>
 <script>
-export default {};
+export default {
+  middleware: "mw_vuex",
+  // middlewareのcontext.app.head.titleより後に呼び出されるため、ここのhead methodが最終的に設定される
+  head() {
+    return {
+      title: "pages/vuex/index.vue"
+    };
+  }
+};
 </script>
 <style scoped>
 #vuex {

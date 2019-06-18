@@ -17,6 +17,7 @@
 </template>
 <script>
 export default {
+  middleware: "mw_cookie",
   layout: "home"
 };
 </script>

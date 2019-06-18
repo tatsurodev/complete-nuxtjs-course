@@ -74,5 +74,7 @@ module.exports = {
     // linkExactActiveClass: 'active',
     // linkActiveClassの問題点は、Homeタブが常にアクティブになり、nested routeで親コンポーネントのタグ(/route)が子コンポーネント(/route/my_route)選択時にactiveになってしまうこと
     // linkActiveClass: 'active',
+    // index順にmiddlewareが実行される
+    // middleware: ['mw1', 'mw2']
   }
 }

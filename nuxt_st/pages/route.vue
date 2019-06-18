@@ -22,6 +22,7 @@
 </template>
 <script>
 export default {
+  middleware: "mw1",
   transition: {
     name: "prefix"
   },

@@ -49,16 +49,16 @@ export default {
       });
   },
   // 取得したデータを表示する必要があるならasyncData, vuex等にinjectするならfetch
-  async fetch(context) {
-    try {
-      const response = await context.$axios.get(
-        "http://localhost:9000/retrieve"
-      );
-      context.store.commit("reset_both", response.data);
-    } catch (err) {
-      context.error({ message: err.message });
-    }
-  },
+  // async fetch(context) {
+  //   try {
+  //     const response = await context.$axios.get(
+  //       "http://localhost:9000/retrieve"
+  //     );
+  //     context.store.commit("reset_both", response.data);
+  //   } catch (err) {
+  //     context.error({ message: err.message });
+  //   }
+  // },
   data() {
     return {
       data_msg: "msg in data..."

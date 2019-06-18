@@ -35,3 +35,18 @@ export const mutations = {
     state.id = arg.id
   }
 }
+// nuxtServerInitはvuexのactionで定義
+export const actions = {
+  async nuxtServerInit(store, context) {
+    try {
+      const response = await context.$axios.get(
+        "http://localhost:9000/retrieve"
+      );
+      store.commit("reset_both", response.data);
+    } catch (err) {
+      context.error({
+        message: err.message
+      });
+    }
+  }
+}

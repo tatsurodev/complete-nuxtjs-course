@@ -26,21 +26,29 @@ export default {
     };
   },
   // asyncDataで返されたdataプロパティはdataにmergeされる
-  asyncData(context) {
-    // asyncDataでthenを使用する時、returnを2回使用することに注意
-    return axios
-      .get("http://localhost:9000/retrieve")
-      .then(res => {
-        return res.data;
-      })
-      .catch(error => {
-        // error表示
-        // context.error({
-        //   message: "ajax problem, sorry..."
-        // });
-        // redirect
-        context.redirect("/");
-      });
+  // asyncData(context) {
+  //   // asyncDataでthenを使用する時、returnを2回使用することに注意
+  //   return axios
+  //     .get("http://localhost:9000/retrieve")
+  //     .then(res => {
+  //       return res.data;
+  //     })
+  //     .catch(error => {
+  //       // error表示
+  //       // context.error({
+  //       //   message: "ajax problem, sorry..."
+  //       // });
+  //       // redirect
+  //       context.redirect("/");
+  //     });
+  // },
+  async asyncData(context) {
+    try {
+      const response = await axios.get("http://localhost:9000/retrieve");
+      return response.data;
+    } catch (err) {
+      context.error({ message: "ajax problem..." });
+    }
   },
   data() {
     return {

@@ -1,15 +1,8 @@
 <template>
   <div id="resource">
-    <!-- asset folderは、相対もしくは絶対パスで指定 -->
-    <img src="~/assets/asset.jpg" alt>
-    <!-- 動的リンクにはassets folderのファイルは使えない、下記のコードは正しくリンクされない -->
-    <!-- <img :src="image[0]" alt> -->
+    <b-alert show variant="info">{{ data_msg }}</b-alert>
     <hr>
-    <!-- static folderは、/file_nameのみ -->
-    <!-- <img src="/static.jpg" alt> -->
-    <img :src="image[1]" alt>
-    <hr>
-    <div id="frame"></div>
+    <b-alert show variant="success">{{ async_msg }}</b-alert>
   </div>
 </template>
 <script>
@@ -27,9 +20,15 @@ export default {
       ]
     };
   },
+  // asyncDataで返されたdataプロパティはdataにmergeされる
+  asyncData() {
+    return {
+      data_msg: "asyncData msg in data..."
+    };
+  },
   data() {
     return {
-      image: ["~/assets/asset.jpg", "/static.jpg"]
+      data_msg: "msg in data..."
     };
   }
 };

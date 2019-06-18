@@ -2,10 +2,15 @@
   <div id="resource">
     <b-alert show variant="info">{{ data_msg }}</b-alert>
     <hr>
-    <b-alert show variant="success">{{ async_msg }}</b-alert>
+    <b-alert show variant="success">
+      {{ msg }}
+      <hr>
+      {{ id }}
+    </b-alert>
   </div>
 </template>
 <script>
+import axios from "axios";
 export default {
   head() {
     return {
@@ -21,10 +26,21 @@ export default {
     };
   },
   // asyncDataで返されたdataプロパティはdataにmergeされる
-  asyncData() {
-    return {
-      data_msg: "asyncData msg in data..."
-    };
+  asyncData(context) {
+    // asyncDataでthenを使用する時、returnを2回使用することに注意
+    return axios
+      .get("http://localhost:9000/retrieve")
+      .then(res => {
+        return res.data;
+      })
+      .catch(error => {
+        // error表示
+        // context.error({
+        //   message: "ajax problem, sorry..."
+        // });
+        // redirect
+        context.redirect("/");
+      });
   },
   data() {
     return {

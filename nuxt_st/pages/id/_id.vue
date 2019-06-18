@@ -36,6 +36,7 @@ export default {
   //     throw new Error("ID must be a number!");
   //   }
   // },
+  middleware: "mw_check",
   transition: {
     name: "prefix"
   },

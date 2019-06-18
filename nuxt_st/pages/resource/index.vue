@@ -7,6 +7,11 @@
       <hr>
       {{ id }}
     </b-alert>
+    <b-alert show variant="primary">
+      {{ $store.state.msg }}
+      <hr>
+      {{ $store.state.id }}
+    </b-alert>
   </div>
 </template>
 <script>
@@ -27,28 +32,29 @@ export default {
     };
   },
   // asyncDataで返されたdataプロパティはdataにmergeされる
-  // asyncData(context) {
-  //   // asyncDataでthenを使用する時、returnを2回使用することに注意
-  //   return axios
-  //     .get("http://localhost:9000/retrieve")
-  //     .then(res => {
-  //       return res.data;
-  //     })
-  //     .catch(error => {
-  //       // error表示
-  //       // context.error({
-  //       //   message: "ajax problem, sorry..."
-  //       // });
-  //       // redirect
-  //       context.redirect("/");
-  //     });
-  // },
-  async asyncData(context) {
+  asyncData(context) {
+    // asyncDataでthenを使用する時、returnを2回使用することに注意
+    return context.$axios
+      .get("http://localhost:9000/retrieve")
+      .then(res => {
+        return res.data;
+      })
+      .catch(error => {
+        // error表示
+        // context.error({
+        //   message: "ajax problem, sorry..."
+        // });
+        // redirect
+        context.redirect("/");
+      });
+  },
+  // 取得したデータを表示する必要があるならasyncData, vuex等にinjectするならfetch
+  async fetch(context) {
     try {
       const response = await context.$axios.get(
         "http://localhost:9000/retrieve"
       );
-      return response.data;
+      context.store.commit("reset_both", response.data);
     } catch (err) {
       context.error({ message: err.message });
     }

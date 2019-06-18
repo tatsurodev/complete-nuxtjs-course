@@ -25,11 +25,13 @@ export default function () {
 
 /* module mode */
 export const state = () => ({
-  msg: 'msg in store/index.js state MODULE'
+  msg: 'initial msg...',
+  id: 0
 })
 
 export const mutations = {
-  reset_msg(state, arg) {
-    state.msg = arg
+  reset_both(state, arg) {
+    state.msg = arg.msg
+    state.id = arg.id
   }
 }

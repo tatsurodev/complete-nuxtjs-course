@@ -2,8 +2,12 @@
   <div id="navi_bar">
     <nuxt-link to="/">Home</nuxt-link>
     <nuxt-link :to="'/'+$route.params.id">Introduction</nuxt-link>
-    <nuxt-link :to="'/'+$route.params.id+'/spec'">Tech Spec</nuxt-link>
-    <nuxt-link :to="'/'+$route.params.id+'/history'">History</nuxt-link>
+    <nuxt-link :to="'/'+$route.params.id+'/spec'">
+      <i class="fas fa-lock"></i>Tech Spec
+    </nuxt-link>
+    <nuxt-link :to="'/'+$route.params.id+'/history'">
+      <i class="fas fa-lock"></i>History
+    </nuxt-link>
   </div>
 </template>
 

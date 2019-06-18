@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "bootstrap-vue": "^2.0.0-rc.23",
+    "cookie-universal-nuxt": "^2.0.16",
     "iview": "^3.4.2",
     "nuxt": "^2.8.1"
   },

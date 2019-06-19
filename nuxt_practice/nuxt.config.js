@@ -47,7 +47,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['bootstrap-vue/nuxt', 'cookie-universal-nuxt'],
+  modules: ['bootstrap-vue/nuxt', 'cookie-universal-nuxt', '@nuxtjs/axios'],
   /*
    ** Build configuration
    */

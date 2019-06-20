@@ -62,6 +62,30 @@ app.use('/introduction/:id', (req, res) => {
     }
 })
 
+app.use('/spec/:id', (req, res) => {
+    res.set({
+        "Access-Control-Allow-Origin": "http://localhost:3000",
+        "Access-Control-Allow-Headers": "Content-Type"
+    })
+    if (/^\d+$/.test(req.params.id)) {
+        res.json([true, db[req.params.id].spec])
+    } else {
+        res.json([false])
+    }
+})
+
+app.use('/history/:id', (req, res) => {
+    res.set({
+        "Access-Control-Allow-Origin": "http://localhost:3000",
+        "Access-Control-Allow-Headers": "Content-Type"
+    })
+    if (/^\d+$/.test(req.params.id)) {
+        res.json([true, db[req.params.id].history])
+    } else {
+        res.json([false])
+    }
+})
+
 app.all('/*', (req, res) => {
     res.send('sorry, unknown URL')
 })

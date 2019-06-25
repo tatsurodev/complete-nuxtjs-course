@@ -9,6 +9,7 @@
 
     <div id="main">
       <navi/>
+      <!-- nuxtタグにはpagesにあるvueが表示される、vueでいうところのview-routerタグと同義 -->
       <nuxt/>
     </div>
 

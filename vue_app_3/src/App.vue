@@ -3,7 +3,7 @@
     <div id="header">
       <span id="title">Header Set in App.vue</span>
     </div>
-
+    <!-- #mainはrouter-viewのcontentをfixedのheader,footerから余白を入れて守る -->
     <div id="main">
       <div id="nav">
         <router-link to="/">Introduction</router-link>|

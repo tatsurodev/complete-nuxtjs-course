@@ -3,6 +3,8 @@
     <nuxt-link to="/">Home</nuxt-link>
     <nuxt-link :to="'/'+$route.params.id">Introduction</nuxt-link>
     <nuxt-link :to="'/'+$route.params.id+'/spec'">
+      <!-- 名前付きルートversion、こっちでもおｋ -->
+      <!-- <nuxt-link :to="{name: 'id-spec', params: { id: $route.params.id } }"> -->
       <i class="fas fa-lock"></i>Tech Spec
     </nuxt-link>
     <nuxt-link :to="'/'+$route.params.id+'/history'">

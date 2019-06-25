@@ -1,7 +1,9 @@
 <template>
   <section class="container">
     <gallery/>
-    <nuxt-child></nuxt-child>
+    <nuxt-child/>
+    <!-- 下記でもおｋ -->
+    <!-- <nuxt-child></nuxt-child> -->
   </section>
 </template>
 

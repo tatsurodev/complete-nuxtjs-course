@@ -2,6 +2,7 @@
   <div id="error">
     <!-- <app-logo/> -->
     <AppLogo/>
+    <!-- error propsは、statusCodeとmessageという2つのプロパティを持つ -->
     <div id="errorStatus">{{ error.statusCode }}</div>
     <div id="errorMsg">{{ error.message }}</div>
   </div>
@@ -14,6 +15,7 @@ export default {
   components: {
     AppLogo
   },
+  // scriptタグないでアクセスする場合は、this.errorを使用
   props: ["error"]
 };
 </script>
